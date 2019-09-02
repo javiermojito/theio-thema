@@ -15,7 +15,19 @@ public class movimientoCamaraEntrenamiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0);
-        transform.Translate(0, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+        transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+
+        if(Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(new Vector3(0,speed*Time.deltaTime*7));
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(new Vector3(0,speed * Time.deltaTime * -7));
+        }
+
+
+
     }
 }

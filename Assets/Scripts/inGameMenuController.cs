@@ -10,7 +10,7 @@ public class inGameMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -29,7 +29,6 @@ public class inGameMenuController : MonoBehaviour
                 }
                 else
                 {
-                    
                     isPaused = true;
                 }
                 pauseGame();
